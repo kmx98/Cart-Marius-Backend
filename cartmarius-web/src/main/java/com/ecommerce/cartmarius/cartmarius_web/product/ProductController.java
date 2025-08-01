@@ -20,11 +20,11 @@ public class ProductController {
 
     private GameRepository repository;
     
+    // Inyecccion sin constructor
     @Autowired
     private ProductService productService;
 
     // Constructor con inyeccion
-    @Autowired
     public ProductController(GameRepository repository) {
         this.repository = repository;
     }
@@ -58,4 +58,5 @@ public class ProductController {
         return ResponseEntity.ok(dto);
     }
 
+    
 }
